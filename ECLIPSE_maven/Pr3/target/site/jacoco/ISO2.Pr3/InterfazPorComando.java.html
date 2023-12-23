@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>InterfazPorComando.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Pr3</a> &gt; <a href="index.source.html" class="el_package">ISO2.Pr3</a> &gt; <span class="el_source">InterfazPorComando.java</span></div><h1>InterfazPorComando.java</h1><pre class="source lang-java linenums">package ISO2.Pr3;
+
+import java.util.Scanner;
+
+<span class="nc" id="L5">public class InterfazPorComando {</span>
+
+<span class="nc" id="L7">	private static Scanner TECLADO = new Scanner(System.in);</span>
+
+	public static double leerNumero(String mensaje) {
+<span class="nc" id="L10">		System.out.print(mensaje + &quot;: &quot;);</span>
+<span class="nc bnc" id="L11" title="All 2 branches missed.">		while (!TECLADO.hasNextDouble()) {</span>
+<span class="nc" id="L12">			System.out.println(&quot;¡Entrada inválida! Introduce un número.&quot;);</span>
+<span class="nc" id="L13">			TECLADO.nextLine();</span>
+		}
+<span class="nc" id="L15">		return TECLADO.nextDouble();</span>
+	}
+
+	public static void imprimirMensaje(String mensaje) {
+<span class="nc" id="L19">		System.out.println(mensaje);</span>
+<span class="nc" id="L20">	}</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
